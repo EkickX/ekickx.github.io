@@ -1,0 +1,40 @@
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<div class="navbar-item">
+			<a href="/"><img src="/img/logo-big.png" alt=""></a>
+		</div>
+		<input type="checkbox" id="clicking">
+		<label for="clicking" role="button" class="navbar-burger is-clicked" aria-label="menu" aria-expanded="false">
+			<% for(var i=0; i<3; i++){ %> 
+				<span aria-hidden="true"></span>
+			<% } %>
+		</label>
+		<div class="modal">
+			<label for="clicking" class="modal-background is-clicked"></label>
+			<div class="modal-content has-text-centered" style=" width: auto;">
+				<% for (var i in theme.menu){ %>
+					<a class="title has-text-link" style="line-height: 230%" href="<%- url_for(theme.menu[i]) %>"><%= i %></a><br>
+				<% } %>
+			</div>
+		</div>
+	</div>
+	<div class="navbar-menu">
+		<div class="navbar-start">
+			<% for (var i in theme.menu){ %>
+                <a class="navbar-item hvr-underline-from-center" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+            <% } %>
+		</div>
+		<di class="navbar-end">
+			<div class="navbar-item">
+				<div class="field has-addons">
+					<div class="control">
+						<input type="text" class="input" placeholder="Find a Post">
+					</div>
+					<div class="control">
+						<button class="button is-link fas fa-search"></button>
+					</div>
+				</div>
+			</div>
+		</di>
+	</div>
+</nav>

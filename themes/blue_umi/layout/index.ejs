@@ -1,0 +1,41 @@
+<section class="hero is-fullheight">
+	<div class="hero-body">
+		<div class="container">
+			<div class="columns">
+				<div class="column is-three-fifths">
+					<h1 class="title has-text-white">Lorem</h1>
+					<p class="subtitle has-text-light not-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque in rem natus minima voluptates quibusdam exercitationem similique, numquam rerum maiores architecto officia, vero autem dolore vitae ratione quasi tempore nesciunt.</p>
+				</div>
+			</div>
+			<div class="buttons">
+				<a href="#about" class="button is-size-5 is-link is-outlined hvr-shutter-out-horizontal">About Me</a>
+				<a href="#recent" class="button is-size-5 is-link is-outlined hvr-shutter-out-horizontal">Recent Articles</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section" id="about" style="background-color: #ECF4FA">
+	<div class="container">
+		<h2 class="title">About Me</h2>
+		<div class="columns">
+			<div class="column">
+				<p class="not-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore esse magnam accusamus praesentium aperiam officia aut perferendis voluptatem deserunt, nulla officiis velit veniam dolore, vel quo accusantium asperiores quis? Veniam alias maxime porro laudantium perspiciatis aut, quis a ad possimus.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section" id="recent" style="background-color: #fdfd">
+	<div class="container">
+		<h2 class="title">Recent Articles</h2>
+		<div class="columns is-centered">
+			<% site.posts.sort('date', -1).limit(3).forEach(function(post){ %>
+				<%- partial('_partial/article_excerpt', {item: post}) %>
+			<% }); %>
+		</div>
+		<div class="buttons is-centered" style="margin-top: 1.7em">
+			<a href="/all" class="button is-link hvr-round-corners">All Articles</a>
+		</div>
+	</div>
+</section>

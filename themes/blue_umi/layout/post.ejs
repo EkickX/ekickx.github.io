@@ -1,0 +1,28 @@
+<%- partial('_partial/navbar') %>
+<section class="section container">
+	<div class="columns is-centered">
+		<div class="column is-10">
+			<h1 class="title is-size-1"><%= page.title %></h1>
+			<p class="subtitle is-size-6" style="color: #999"><%= page.date.format(config.date_format) %></p>
+			<%- partial('_partial/post-tags', {item: page}) %>
+			<p><%- page.content %></p>
+		</div>
+	</div>
+</section>
+<section class="section" style="background-color: #fdfd">
+	<div class="container">
+		<div class="columns is-centered">
+			<div class="column is-10">
+				<h2 class="title">Random Article</h2>
+				<div class="columns is-centered">
+					<% site.posts.random().limit(3).forEach(function(post){ %>
+						<%- partial('_partial/article_excerpt', {item: post}) %>
+					<% }); %>
+				</div>
+				<div class="buttons is-centered" style="margin-top: 1.7em">
+					<a href="" class="button is-link hvr-round-corners">Show More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

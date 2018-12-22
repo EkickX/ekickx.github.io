@@ -1,0 +1,24 @@
+<%
+    var title = '';
+    if (page.category) title = page.category;
+    if (page.tag) title = "Tag: "+page.tag;
+    if (page.archive) title = "All";
+%>
+<% var postSum = 1 %>
+<%- partial('_partial/navbar') %>
+<section class="section container">
+<% if(title) { %>
+   <h2 class="title is-capital" style="margin-bottom: 0px"><%= title %></h2>
+	<hr style="margin: 0.5em 0 2em">
+<% } %>
+<% page.posts.each(function(item){ %>
+	<% if (postSum % 3 == 1){ %>
+	<div class="columns is-centered">
+	<% } %>
+		<%- partial('_partial/article_excerpt', {item: item}) %>
+		<% if (postSum % 3 == 0){ %>
+	</div>
+	<% } %>
+	<% postSum++; %>
+<% }); %>
+</section>

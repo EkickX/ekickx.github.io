@@ -1,0 +1,11 @@
+<% if (item.tags && item.tags.length){ %>
+<%
+    var tags = [];
+    item.tags.forEach(function(tag){
+        tags.push('<a class="tag is-link hvr-bounce-in" href="' + config.root + tag.path + '">#' + tag.name + '</a>');
+    });
+%>
+<div class="tags" style="margin-bottom: 0">
+    <%- tags.join(' ') %>
+</div>
+<% } %>

@@ -5,4 +5,4 @@ db.json
 node_modules/
 site/
 .deploy*/
-source/_post/
+source/_posts/

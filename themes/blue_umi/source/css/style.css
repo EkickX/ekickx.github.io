@@ -1,3 +1,7 @@
+@keyframes blurout{
+	from {filter: blur(7px);}
+	to {filter: blur(0);}
+}
 html{
 	scroll-behavior: smooth;
 }
@@ -17,15 +21,14 @@ hr{
 .footer{
 	padding: 5rem 1.5rem 5rem;
 }
-
-.hero.is-fullheight{
-	background-image: url(../img/banner.png);
-	background-size: cover;	
-	background-attachment: fixed;
+.is-lazy-bg{
+	bottom: 0; left: 0; right: 0; top: 0;
+	position: absolute; height: 100%;
+	background-size: cover; background-attachment: fixed;
 }
-.hero.is-fullheight .title, .hero.is-fullheight .subtitle, .hero.is-fullheight .buttons{
-	animation-name: fadeInDown;	animation-duration: 2s;	
-}
+.loading{filter: blur(3px);}
+.loaded{animation-name: blurout; animation-duration: 0.7s}
+.animated{animation-duration: 2s}
 .column.is-10{
 	animation-name: fadeInUp; animation-duration: 1.4s;
 }

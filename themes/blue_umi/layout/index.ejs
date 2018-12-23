@@ -1,13 +1,14 @@
 <section class="hero is-fullheight">
+	<div class="is-lazy-bg loaded" data-bg="url(/img/banner.png)"></div>
 	<div class="hero-body">
 		<div class="container">
 			<div class="columns">
 				<div class="column is-three-fifths">
-					<h1 class="title has-text-white">Lorem</h1>
-					<p class="subtitle has-text-light not-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque in rem natus minima voluptates quibusdam exercitationem similique, numquam rerum maiores architecto officia, vero autem dolore vitae ratione quasi tempore nesciunt.</p>
+					<h1 class="title has-text-white animated delay-1s fadeInDown">Lorem</h1>
+					<p class="subtitle has-text-light not-p animated delay-1s fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque in rem natus minima voluptates quibusdam exercitationem similique, numquam rerum maiores architecto officia, vero autem dolore vitae ratione quasi tempore nesciunt.</p>
 				</div>
 			</div>
-			<div class="buttons">
+			<div class="buttons animated delay-2s fadeInDown">
 				<a href="#about" class="button is-size-5 is-link is-outlined hvr-shutter-out-horizontal">About Me</a>
 				<a href="#recent" class="button is-size-5 is-link is-outlined hvr-shutter-out-horizontal">Recent Articles</a>
 			</div>
@@ -39,3 +40,9 @@
 		</div>
 	</div>
 </section>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@10.19.0/dist/lazyload.min.js"></script>
+<script>
+	var myLazyLoad = new LazyLoad({
+	elements_selector: ".is-lazy-bg"
+	});
+</script>

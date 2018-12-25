@@ -21,7 +21,7 @@ hr{
 .footer{
 	padding: 5rem 1.5rem 5rem;
 }
-/*.is-lazy{animation-name: blurout; animation-duration: 1.5s}*/
+.is-lazy{animation-name: blurout; animation-duration: 1.5s}
 .is-lazy.is-bg{
 	bottom: 0; left: 0; right: 0; top: 0;
 	position: absolute; height: 100%;

@@ -2,8 +2,8 @@
 	<div class="card">
 		<div class="card-image">
 			<figure class="image">
-			<%  if(item.header_img == "header.png") { %>
-				<img src="<%- url_for(item.path+item.header_img) %>" alt="">
+			<%  if(item.header_img == "header.jpg") { %>
+				<img class="is-lazy" src="<%- url_for(item.path+item.header_img) %>" alt="">
 			<% } else { %>
 				<img src="/img/header.png" alt="">
 			<!-- <% } %> -->

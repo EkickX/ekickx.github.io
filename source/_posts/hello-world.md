@@ -7,15 +7,9 @@ categories:
 	- [japanfilia]
 	- [nerd]
 ---
-## Ohhh  SUCK SUCK 
-##	SUCK SUCKKKKK
+Oh suckkk suckk... Hexo was really suck. The documentation is really poor that makes it suck. I was confusing when making theme for this blog because of it. Fortunately somehow I can finish this blog. Geez I hope it'll get better in future .
 
-## HEXO WAS REALLY SUCK
-
-### But.....
-
-I just realize that I just need times to understand it.. :)
-Btw Itou Miku is an angel-like <span class="fas fa-heart"></span>
+Btw this is a picture of Itou Miku, an angel-like <span class="fas fa-heart"></span>
 <div class="has-text-centered">
 {% asset_img angel.jpeg %}
 </div>

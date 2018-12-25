@@ -1,5 +1,5 @@
 @keyframes blurout{
-	from {filter: blur(7px);}
+	from {filter: blur(8px);}
 	to {filter: blur(0);}
 }
 html{
@@ -16,18 +16,18 @@ hr{
   opacity: 1; transition: .4s ease; backface-visibility: hidden;
 }
 .card:hover img {
-  opacity: 0.75; transform: scale(1.1);
+  opacity: 0.93; transform: scale(1.1);
 }
 .footer{
 	padding: 5rem 1.5rem 5rem;
 }
-.is-lazy-bg{
+.is-lazy{animation-name: blurout; animation-duration: 1.5s}
+.is-lazy.is-bg{
 	bottom: 0; left: 0; right: 0; top: 0;
 	position: absolute; height: 100%;
 	background-size: cover; background-attachment: fixed;
+	background-image: url(../img/banner.jpg);
 }
-.loading{filter: blur(3px);}
-.loaded{animation-name: blurout; animation-duration: 0.7s}
 .animated{animation-duration: 2s}
 .column.is-10{
 	animation-name: fadeInUp; animation-duration: 1.4s;
@@ -35,11 +35,11 @@ hr{
 .column.is-card{
 	animation-name: fadeInUp; animation-duration: 1.7s;
 }
-@media screen and (max-width: 642px) {
+/*@media screen and (max-width: 642px) {
 	.hero.is-fullheight{
 		background-image: url(../img/banner.png)
 	}
-}
+}*/
 .button.is-link.is-outlined.hvr-shutter-out-horizontal{
 	display: inline-block;
 	vertical-align: middle;
